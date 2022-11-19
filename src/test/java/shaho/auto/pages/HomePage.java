@@ -10,9 +10,12 @@ public class HomePage {
     private By homePageLink = By.xpath("//a[@title='home page']");
     private By veterinarianPageLink = By.xpath("//a[@title='veterinarians']");
     private By welcomeImage = By.cssSelector(".img-responsive");
+    private By qProsImage = By.cssSelector("[alt='Sponsored by Pivotal']");
 
     // For assertions
     public WebElement welcomeImageWebEle = driver.findElement(welcomeImage);
+    public WebElement qProsImageWebEle = driver.findElement(qProsImage);
+
 
     // Home Functions
     public void clickOnVeterinarianLink() {

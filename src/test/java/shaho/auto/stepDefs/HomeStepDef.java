@@ -1,26 +1,19 @@
 package shaho.auto.stepDefs;
 
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 import shaho.auto.pages.HomePage;
-
-import java.time.Duration;
-
-import static shaho.auto.stepDefs.Hooks.driver;
 
 public class HomeStepDef {
     HomePage homePage = new HomePage();
 
-//    @When("user open home page")
-//    public void userOpenHomePage() {
-//        homePage.clickOnHomePageLink();
-//    }
-
-    @Then("home page opened and contains welcome image")
-    public void homePageOpenedAndContainsWelcomeImage() {
-        Assert.assertEquals(homePage.welcomeImageWebEle.isDisplayed(), true, "Assert on Image");
+    @Then("verify that home page contains welcome image")
+    public void verifyHomePage() {
+        SoftAssert softAssert = new SoftAssert();
+        // Assert on Welcome image
+        softAssert.assertEquals(homePage.welcomeImageWebEle.isDisplayed(), true, "Assert on welcome Image");
+        // Assert on Welcome image
+        softAssert.assertEquals(homePage.qProsImageWebEle.isDisplayed(), true, "Assert on Qpros image");
+        softAssert.assertAll();
     }
 }

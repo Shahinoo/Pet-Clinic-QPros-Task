@@ -22,13 +22,13 @@ public class VeterinariansPage {
         return driver.findElement(veterinarianTable);
     }
 
-    public List<WebElement> getRows() {
+    public List<WebElement> getVeterinariansRows() {
         return getVeterinarianTableWebEl().findElements(By.tagName("tr"));
     }
 
     // actions
     public void printTableElements() {
-        for (WebElement row : getRows()) {
+        for (WebElement row : getVeterinariansRows()) {
             List<WebElement> cols = row.findElements(By.tagName("td"));
             for (WebElement col : cols) {
                 System.out.println(col.getText());

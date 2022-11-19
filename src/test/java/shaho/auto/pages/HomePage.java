@@ -9,6 +9,7 @@ public class HomePage {
     // Home page locators
     private By homePageLink = By.xpath("//a[@title='home page']");
     private By veterinarianPageLink = By.xpath("//a[@title='veterinarians']");
+    private By findOwnerPageLink = By.xpath("//a[@title='find owners']");
     private By welcomeImage = By.cssSelector(".img-responsive");
     private By qProsImage = By.cssSelector("[alt='Sponsored by Pivotal']");
 
@@ -22,7 +23,8 @@ public class HomePage {
         driver.findElement(veterinarianPageLink).click();
     }
 
-    public void clickOnHomePageLink() {
-        driver.findElement(homePageLink).click();
+    public void clickOnFindOwnerPageLink() {
+        driver.findElement(findOwnerPageLink).click();
     }
+
 }

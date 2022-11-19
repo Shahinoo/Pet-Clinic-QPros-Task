@@ -1,12 +1,8 @@
 package shaho.auto.pages;
 
-import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import shaho.auto.data.JsonDataReader;
-
-import java.io.IOException;
 import java.util.List;
 
 import static shaho.auto.stepDefs.Hooks.driver;

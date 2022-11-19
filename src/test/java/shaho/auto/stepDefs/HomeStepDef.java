@@ -11,9 +11,9 @@ public class HomeStepDef {
     public void verifyHomePage() {
         SoftAssert softAssert = new SoftAssert();
         // Assert on Welcome image
-        softAssert.assertEquals(homePage.welcomeImageWebEle.isDisplayed(), true, "Assert on welcome Image");
+        softAssert.assertEquals(homePage.getWelcomeImageWebEle().isDisplayed(), true, "Assert on welcome Image");
         // Assert on Welcome image
-        softAssert.assertEquals(homePage.qProsImageWebEle.isDisplayed(), true, "Assert on Qpros image");
+        softAssert.assertEquals(homePage.getQProsImageWebEle().isDisplayed(), true, "Assert on Qpros image");
         softAssert.assertAll();
     }
 }

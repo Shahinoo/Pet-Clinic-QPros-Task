@@ -14,8 +14,13 @@ public class HomePage {
     private By qProsImage = By.cssSelector("[alt='Sponsored by Pivotal']");
 
     // For assertions
-    public WebElement welcomeImageWebEle = driver.findElement(welcomeImage);
-    public WebElement qProsImageWebEle = driver.findElement(qProsImage);
+    public WebElement getWelcomeImageWebEle() {
+        return driver.findElement(welcomeImage);
+    }
+
+    public WebElement getQProsImageWebEle() {
+        return driver.findElement(qProsImage);
+    }
 
 
     // Home Functions
